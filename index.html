@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLE9G83D9B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JLE9G83D9B');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Persolife Academia — treinamento, saúde e bem-estar em Caxias do Sul.">
@@ -193,18 +201,37 @@
       .footer-grid{grid-template-columns:1fr}
       .actions .btn{width:100%}
     }
+
+
+    /* ===== COMPARAÇÃO RÁPIDA DAS DUAS UNIDADES ===== */
+    .units-intro{max-width:850px;margin:0 auto 30px;text-align:center}
+    .units-intro .kicker{display:inline-block}
+    .units-intro h2{font-size:clamp(2rem,4vw,3.15rem);line-height:1.08;margin:12px 0}
+    .units-intro p{color:var(--muted);font-size:1.05rem}
+    .unit-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:34px 0 58px;align-items:stretch}
+    .unit-choice{position:relative;display:flex;flex-direction:column;padding:30px;border-radius:24px;background:#fff;border:2px solid var(--line);box-shadow:0 12px 34px rgba(0,0,0,.055);transition:transform .25s,box-shadow .25s,border-color .25s;overflow:hidden}
+    .unit-choice:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(0,0,0,.1)}
+    .unit-choice.feminina{border-color:#f6b6e5;background:linear-gradient(145deg,#fff 45%,#fff0fa)}
+    .unit-choice.geral{border-color:#b8e5c7;background:linear-gradient(145deg,#fff 45%,#effaf2)}
+    .choice-top{display:flex;align-items:center;gap:14px;margin-bottom:17px}
+    .choice-symbol{width:54px;height:54px;display:grid;place-items:center;flex:none;border-radius:16px;font-size:1.65rem;font-weight:900}
+    .feminina .choice-symbol{background:#ffe0f5;color:var(--pink-dark)}
+    .geral .choice-symbol{background:#dff5e6;color:var(--green-dark)}
+    .choice-tag{font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;font-weight:900;color:var(--muted)}
+    .unit-choice h3{font-size:clamp(1.4rem,2.5vw,2rem);line-height:1.1;margin:4px 0 0}
+    .choice-summary{color:var(--muted);margin-bottom:20px}
+    .choice-facts{list-style:none;display:grid;gap:13px;margin:0 0 24px}
+    .choice-facts li{display:grid;grid-template-columns:25px 1fr;gap:10px;align-items:start}
+    .fact-icon{font-size:1.1rem;line-height:1.5}
+    .choice-facts strong{display:block;font-size:.86rem}
+    .choice-facts span{display:block;color:var(--muted);font-size:.92rem;line-height:1.45}
+    .choice-action{margin-top:auto;display:flex;flex-wrap:wrap;gap:10px}
+    .choice-action .btn{flex:1 1 160px}
+    .units-divider{display:flex;align-items:center;gap:16px;margin:0 0 30px;color:var(--muted);font-size:.8rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}
+    .units-divider:before,.units-divider:after{content:"";height:1px;background:var(--line);flex:1}
+    @media(max-width:700px){.unit-choices{grid-template-columns:1fr;gap:16px;margin:26px 0 42px}.unit-choice{padding:24px}.units-intro{text-align:left}}
+
   </style>
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JLE9G83D9B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JLE9G83D9B');
-</script>
-  
 </head>
 
 <body>
@@ -227,9 +254,9 @@
 
   <section class="hero">
     <div class="container hero-content">
-      <span class="eyebrow">Grupo Persolife • Caxias do Sul</span>
-      <h1>Movimento que transforma. <br>Saúde para a vida.</h1>
-      <p>Treinamento, acompanhamento e um ambiente preparado para você cuidar do corpo, ganhar disposição e viver melhor.</p>
+      <span class="eyebrow">Grupo Persolife • 2 unidades em Caxias do Sul</span>
+      <h1>Duas unidades. <br>Uma vida mais ativa.</h1>
+      <p>Escolha a unidade que combina com você: um espaço exclusivo para mulheres ou uma academia para o público geral.</p>
       <div class="actions">
         <a class="btn btn-primary" href="https://calendly.com/persolife" target="_blank" rel="noopener" data-track="agendar_aula_experimental" data-location="hero">Agendar Aula Experimental →</a>
         <a class="btn btn-outline" href="#unidades">Conheça nossas unidades</a>
@@ -239,11 +266,49 @@
 
   <section id="unidades">
     <div class="container">
-      <div class="section-head">
-        <span class="kicker">Duas experiências</span>
-        <h2>Escolha a Persolife ideal para você.</h2>
-        <p>Unidades com propostas diferentes, mas o mesmo compromisso com qualidade, atendimento e evolução.</p>
+      <div class="units-intro">
+        <span class="kicker">Conheça nossas duas unidades</span>
+        <h2>Qual Persolife é a sua?</h2>
+        <p>As duas unidades têm o compromisso com saúde e bem-estar, mas cada uma tem uma proposta própria. Compare os detalhes e escolha a melhor para você.</p>
       </div>
+
+      <div class="unit-choices" aria-label="Compare as duas unidades Persolife">
+        <article class="unit-choice feminina">
+          <div class="choice-top">
+            <div class="choice-symbol" aria-hidden="true">♀</div>
+            <div><div class="choice-tag">Unidade 1 · Exclusivo feminino</div><h3>Persolife Academia Feminina</h3></div>
+          </div>
+          <p class="choice-summary">Um ambiente dedicado às mulheres, com uma proposta acolhedora para cuidar da força, da saúde e do bem-estar.</p>
+          <ul class="choice-facts">
+            <li><span class="fact-icon" aria-hidden="true">📍</span><div><strong>Onde fica</strong><span>Av. Maurício Sirotsky Sobrinho, 3590 — São Virgílio</span></div></li>
+            <li><span class="fact-icon" aria-hidden="true">🕒</span><div><strong>Horários</strong><span>Seg–sex: 7h–10h e 13h30–20h30</span></div></li>
+            <li><span class="fact-icon" aria-hidden="true">💬</span><div><strong>Contato direto</strong><span>(54) 98109-2645</span></div></li>
+          </ul>
+          <div class="choice-action">
+            <a class="btn btn-pink" href="#feminina">Conhecer esta unidade ↓</a>
+            <a class="btn btn-dark btn-whatsapp" href="https://wa.me/5554981092645" target="_blank" rel="noopener" data-track="whatsapp" data-unit="academia_feminina"><svg class="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M19.11 17.37c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.26 0 1.34.98 2.62 1.11 2.8.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.55.57.65.21 1.24.18 1.71.11.52-.08 1.6-.66 1.82-1.29.23-.63.23-1.17.16-1.29-.07-.11-.25-.18-.52-.32z"/><path fill="currentColor" d="M26.67 5.33A13.28 13.28 0 0 0 17.2 1.4c-7.4 0-13.43 6.02-13.43 13.43 0 2.37.62 4.68 1.81 6.72L3.66 28.6l7.21-1.89a13.4 13.4 0 0 0 6.33 1.61h.01c7.4 0 13.43-6.02 13.43-13.43 0-3.59-1.4-6.96-3.97-9.56zm-9.47 20.68h-.01a11.16 11.16 0 0 1-5.69-1.56l-.41-.24-4.28 1.12 1.14-4.17-.27-.43a11.13 11.13 0 1 1 9.52 5.28z"/></svg><span>WhatsApp</span></a>
+          </div>
+        </article>
+
+        <article class="unit-choice geral">
+          <div class="choice-top">
+            <div class="choice-symbol" aria-hidden="true">✦</div>
+            <div><div class="choice-tag">Unidade 2 · Público geral</div><h3>Persolife Academia</h3></div>
+          </div>
+          <p class="choice-summary">Uma academia para o público geral, com estrutura para diferentes objetivos, rotinas e níveis de treino.</p>
+          <ul class="choice-facts">
+            <li><span class="fact-icon" aria-hidden="true">📍</span><div><strong>Onde fica</strong><span>R. João Biazus, 1160 — Bela Vista</span></div></li>
+            <li><span class="fact-icon" aria-hidden="true">🕒</span><div><strong>Horários</strong><span>Seg–sex: 6h–21h30 · Sáb: 8h–12h</span></div></li>
+            <li><span class="fact-icon" aria-hidden="true">💬</span><div><strong>Contato direto</strong><span>(54) 3219-1364</span></div></li>
+          </ul>
+          <div class="choice-action">
+            <a class="btn btn-primary" href="#geral">Conhecer esta unidade ↓</a>
+            <a class="btn btn-dark btn-whatsapp" href="https://wa.me/555432191364" target="_blank" rel="noopener" data-track="whatsapp" data-unit="academia_geral"><svg class="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M19.11 17.37c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.26 0 1.34.98 2.62 1.11 2.8.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.55.57.65.21 1.24.18 1.71.11.52-.08 1.6-.66 1.82-1.29.23-.63.23-1.17.16-1.29-.07-.11-.25-.18-.52-.32z"/><path fill="currentColor" d="M26.67 5.33A13.28 13.28 0 0 0 17.2 1.4c-7.4 0-13.43 6.02-13.43 13.43 0 2.37.62 4.68 1.81 6.72L3.66 28.6l7.21-1.89a13.4 13.4 0 0 0 6.33 1.61h.01c7.4 0 13.43-6.02 13.43-13.43 0-3.59-1.4-6.96-3.97-9.56zm-9.47 20.68h-.01a11.16 11.16 0 0 1-5.69-1.56l-.41-.24-4.28 1.12 1.14-4.17-.27-.43a11.13 11.13 0 1 1 9.52 5.28z"/></svg><span>WhatsApp</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="units-divider">Detalhes, fotos e equipe de cada unidade</div>
 
       <!-- ================= ACADEMIA FEMININA ================= -->
       <article class="unit feminina" id="feminina">
