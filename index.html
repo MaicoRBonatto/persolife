@@ -231,6 +231,29 @@
     .units-divider:before,.units-divider:after{content:"";height:1px;background:var(--line);flex:1}
     @media(max-width:700px){.unit-choices{grid-template-columns:1fr;gap:16px;margin:26px 0 42px}.unit-choice{padding:24px}.units-intro{text-align:left}}
 
+
+
+    /* ===== AVALIAÇÕES DO GOOGLE ===== */
+    .reviews-section{background:#fff}
+    .reviews-head{max-width:760px;margin:0 auto 34px;text-align:center}
+    .reviews-head h2{font-size:clamp(2rem,4vw,3.1rem);line-height:1.08;margin:10px 0 12px}
+    .reviews-head p{color:var(--muted)}
+    .reviews-rating{display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:10px 15px;border:1px solid var(--line);border-radius:999px;background:#fff}
+    .reviews-google{font-weight:900;color:#4285f4;letter-spacing:-.04em}
+    .reviews-stars{color:#fbbc04;letter-spacing:2px;font-size:1.15rem}
+    .reviews-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .review-card{padding:26px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#fff,#fafbfa);box-shadow:0 12px 34px rgba(0,0,0,.055);display:flex;flex-direction:column;min-height:260px}
+    .review-person{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+    .review-avatar{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;flex:none;background:#eaf8ef;color:var(--green-dark);font-weight:900}
+    .review-person strong{display:block;font-size:.98rem}
+    .review-meta{display:block;color:var(--muted);font-size:.8rem}
+    .review-stars{color:#fbbc04;letter-spacing:2px;margin-bottom:12px;font-size:1.1rem}
+    .review-text{font-size:1.02rem;line-height:1.65;margin-bottom:18px}
+    .review-date{color:var(--muted);font-size:.82rem;margin-top:auto}
+    .reviews-foot{display:flex;justify-content:center;margin-top:28px}
+    .reviews-foot .btn{border:1px solid var(--line);background:#fff;color:var(--ink)}
+    @media(max-width:700px){.reviews-grid{grid-template-columns:1fr}.reviews-head{text-align:left}.review-card{padding:22px}}
+
   </style>
 </head>
 
@@ -244,6 +267,7 @@
     <nav aria-label="Navegação principal">
       <a href="#feminina">Academia Feminina</a>
       <a href="#geral">Academia</a>
+      <a href="#avaliacoes">Avaliações</a>
       <a href="#agendamento">Agendamento</a>
       <a class="nav-cta" href="https://calendly.com/persolife" target="_blank" rel="noopener" data-track="agendar_aula_experimental" data-location="menu">Agendar aula</a>
     </nav>
@@ -369,12 +393,12 @@
             <div class="trainer">
               <!-- AVATAR FICTÍCIO: substitua o src por uma foto/caricatura real quando disponível. -->
               <img src="https://i.pravatar.cc/150?img=47" alt="Caricatura fictícia de instrutora">
-              <div><strong>Priscila</strong><span>Personal Trainer</span></div>
+              <div><strong>Camila Martins</strong><span>Personal Trainer</span></div>
             </div>
             <div class="trainer">
               <!-- AVATAR FICTÍCIO: substitua o src por uma foto/caricatura real quando disponível. -->
-              <img src="joana.png" alt="Joana">
-              <div><strong>Joana</strong><span>Instrutora</span></div>
+              <img src="https://i.pravatar.cc/150?img=32" alt="Caricatura fictícia de instrutora">
+              <div><strong>Juliana Rocha</strong><span>Instrutora</span></div>
             </div>
           </div>
         </div>
@@ -437,17 +461,66 @@
           <div class="team-grid">
             <div class="trainer">
               <!-- AVATAR FICTÍCIO: substitua por foto/caricatura real. -->
-              <img src="Edu.png" alt="Caricatura fictícia de professor">
-              <div><strong>Eduto</strong><span>Personal Trainer</span></div>
+              <img src="https://i.pravatar.cc/150?img=12" alt="Caricatura fictícia de professor">
+              <div><strong>Rafael Almeida</strong><span>Personal Trainer</span></div>
             </div>
             <div class="trainer">
               <!-- AVATAR FICTÍCIO: substitua por foto/caricatura real. -->
-              <img src="edu.png" alt="Caricatura fictícia de instrutor">
-              <div><strong>Edu</strong><span>Instrutor</span></div>
+              <img src="https://i.pravatar.cc/150?img=11" alt="Caricatura fictícia de instrutor">
+              <div><strong>Lucas Ferreira</strong><span>Instrutor</span></div>
             </div>
           </div>
         </div>
       </article>
+    </div>
+  </section>
+
+
+
+  <section id="avaliacoes" class="reviews-section">
+    <div class="container">
+      <div class="reviews-head">
+        <span class="kicker">Experiências reais</span>
+        <h2>O que dizem sobre a Persolife</h2>
+        <p>Confira algumas opiniões publicadas por alunos no Google Maps.</p>
+        <div class="reviews-rating" aria-label="Avaliações de usuários do Google">
+          <span class="reviews-google">Google</span>
+          <span class="reviews-stars" aria-label="5 estrelas">★★★★★</span>
+          <span>Opiniões de alunos</span>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div class="review-person">
+            <div class="review-avatar" aria-hidden="true">PP</div>
+            <div>
+              <strong>Paloma Pacheco Rossa</strong>
+              <span class="review-meta">Local Guide · 15 avaliações · 13 fotos</span>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+          <p class="review-text">“Ótimo atendimento, localização, ambiente tranquilo e bons equipamentos!”</p>
+          <span class="review-date">Publicado no Google Maps · há 4 meses</span>
+        </article>
+
+        <article class="review-card">
+          <div class="review-person">
+            <div class="review-avatar" aria-hidden="true">ED</div>
+            <div>
+              <strong>Emerson Dias</strong>
+              <span class="review-meta">Local Guide · 78 avaliações · 4 fotos</span>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+          <p class="review-text">“Profissionais atenciosos, equipamentos em ótimas condições, pertinho da principal, recomendo muito!”</p>
+          <span class="review-date">Publicado no Google Maps · há 2 anos</span>
+        </article>
+      </div>
+
+      <div class="reviews-foot">
+        <a class="btn" href="https://www.google.com/maps/place/Academia+Persolife/@-29.1767608,-51.1541452,672m/data=!3m1!1e3!4m8!3m7!1s0x951ebc95c7ba601d:0x463014cc5348cfd9!8m2!3d-29.1767608!4d-51.1541452!9m1!1b1!16s%2Fg%2F11ddwgc8ns" target="_blank" rel="noopener noreferrer">Ver avaliações no Google Maps ↗</a>
+      </div>
     </div>
   </section>
 
