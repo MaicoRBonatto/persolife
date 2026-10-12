@@ -254,6 +254,34 @@
     .reviews-foot .btn{border:1px solid var(--line);background:#fff;color:var(--ink)}
     @media(max-width:700px){.reviews-grid{grid-template-columns:1fr}.reviews-head{text-align:left}.review-card{padding:22px}}
 
+
+
+    /* ===== WHATSAPP FLUTUANTE DAS DUAS UNIDADES ===== */
+    .whatsapp-floats{
+      position:fixed;right:20px;bottom:22px;z-index:1000;
+      display:flex;flex-direction:column;gap:12px;align-items:flex-end;
+    }
+    .whatsapp-float{
+      display:flex;align-items:center;gap:11px;min-height:56px;
+      padding:10px 17px 10px 12px;border-radius:999px;color:#fff;
+      text-decoration:none;font-size:.88rem;font-weight:750;
+      box-shadow:0 8px 24px rgba(0,0,0,.22);
+      transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;
+    }
+    .whatsapp-float:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.26);filter:brightness(1.04)}
+    .whatsapp-float:focus-visible{outline:3px solid #111;outline-offset:4px}
+    .whatsapp-float svg{width:32px;height:32px;flex:0 0 32px}
+    .whatsapp-float--feminina{background:#e83e8c}
+    .whatsapp-float--geral{background:#168a48}
+    .whatsapp-float-label{display:flex;flex-direction:column;line-height:1.2}
+    .whatsapp-float-label small{font-size:.7rem;font-weight:500;opacity:.9;margin-top:3px}
+    @media(max-width:600px){
+      .whatsapp-floats{right:12px;bottom:14px;gap:9px}
+      .whatsapp-float{min-height:50px;padding:8px 13px 8px 9px;gap:8px;font-size:.78rem}
+      .whatsapp-float svg{width:29px;height:29px;flex-basis:29px}
+      .whatsapp-float-label small{font-size:.65rem}
+    }
+
   </style>
 </head>
 
@@ -568,6 +596,31 @@
     </div>
   </div>
 </footer>
+
+
+<!-- Atalhos flutuantes para falar com cada unidade da Persolife -->
+<div class="whatsapp-floats" aria-label="Contato pelo WhatsApp">
+  <a class="whatsapp-float whatsapp-float--feminina"
+     href="https://wa.me/5554981092645?text=Ol%C3%A1%2C%20Persolife%20Academia%20Feminina!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Fale com a Persolife Academia Feminina pelo WhatsApp"
+     data-track="whatsapp" data-unit="academia_feminina">
+    <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true">
+      <path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.2.6 4.4 1.7 6.3L3 29l7.4-2c1.8 1 3.8 1.5 5.9 1.5h.1c6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3zm0 22.9c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.4 1.2 1.2-4.3-.3-.4a10.3 10.3 0 0 1-1.6-5.5C5.2 9.8 10.1 5 16 5s10.8 4.8 10.8 10.7S21.9 25.9 16 25.9zm5.9-7.7c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.3 1.4 3.5 2.4 3.7 5.8 5.1c2.1.9 2.9.9 4 .8.6-.1 1.9-.8 2.2-1.5s.3-1.4.2-1.5-.3-.2-.6-.4z"/>
+    </svg>
+    <span class="whatsapp-float-label">Academia Feminina<small>Falar pelo WhatsApp</small></span>
+  </a>
+  <a class="whatsapp-float whatsapp-float--geral"
+     href="https://wa.me/555432191364?text=Ol%C3%A1%2C%20Persolife%20Academia!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Fale com a Persolife Academia pelo WhatsApp"
+     data-track="whatsapp" data-unit="academia_geral">
+    <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true">
+      <path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.2.6 4.4 1.7 6.3L3 29l7.4-2c1.8 1 3.8 1.5 5.9 1.5h.1c6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3zm0 22.9c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.4 1.2 1.2-4.3-.3-.4a10.3 10.3 0 0 1-1.6-5.5C5.2 9.8 10.1 5 16 5s10.8 4.8 10.8 10.7S21.9 25.9 16 25.9zm5.9-7.7c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.3 1.4 3.5 2.4 3.7 5.8 5.1c2.1.9 2.9.9 4 .8.6-.1 1.9-.8 2.2-1.5s.3-1.4.2-1.5-.3-.2-.6-.4z"/>
+    </svg>
+    <span class="whatsapp-float-label">Academia Persolife<small>Falar pelo WhatsApp</small></span>
+  </a>
+</div>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
